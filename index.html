@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPG Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+<body>
+    <!--Dark Souls RPG-->
+
+    <!--Title-->
+    <div class="row">
+        <h1 class="col-lg-4 offset-lg-4">Dark Souls RPG Game</h1>
+    </div>
+
+    <!--Cards for characters-->
+    <div class="row" id="selectionRow">
+
+    <div class="card" style="width: 18rem;" id="artorias">
+        <img src="assets/images/Artorias.jpg" class="card-img-top" alt="Artorias of the Abyss">
+        <div class="card-body">
+          <h4 class="card-text"><u>Artorias</u><br> 
+              HP: 125 | AP: 10 | CAP: 10
+          </h4>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="solaire">
+        <img src="assets/images/Solaire.jpg" class="card-img-top" alt="Solaire of Astora">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="ornstein">
+        <img src="assets/images/Ornstein.jpg" class="card-img-top" alt="Dragonslayer Ornstein">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="blackKnight">
+        <img src="assets/images/Black_Knight.jpg" class="card-img-top" alt="Key Black Knight">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <!--Your Character-->
+    <div class="row" id="playerRow">
+        <h2 class="col-lg-4">Your Character</h2>
+    </div>
+    <!--Enemies available to attack-->
+    <div class="row" id="oppenentSelectionRow">
+        <h2 class="col-lg-4">Opponents</h2>
+    </div>
+    <!--Fight Section with attack button-->
+    <div class="row" id="fightSection">
+        <h2 class="col-lg-4">Press The Button To Attack</h2><br>  
+    </div>
+    <div class="row">
+            <button type="button" class="btn btn-danger col-1 offset-1">Attack</button>
+        </div> 
+    <!--Defender-->
+    <div class="row" id="defenderRow">
+        <h2 class="col-lg-4">Defender</h2>
+    </div>
+</body>
+</html>
