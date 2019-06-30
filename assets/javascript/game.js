@@ -2,13 +2,24 @@ $(document).ready(function(){
 
 //Global variables for each character (HP, AP, CAP)
 var characterChosen = false;
+var chosenCharacter;
+var artorias = {
+    HP: 125,
+    AP: 10,
+    CAP: 10,
+}
 //when the game starts choose a character
-$(".card").on("click", function chooseCharacter(){
+$(".card").on("click", function chooseCharacter(event){
     if(!characterChosen){
         characterChosen = true;
         console.log(characterChosen);
-        $(this).appendTo("#playerRow");
-        // $(this).addClass("col-sm-4");
+        // chosenCharacter = this;
+        // console.log(chosenCharacter);
+        // var target = $( event.target );
+        // $(this).appendTo("#playerRow");
+        // if ($(event.target).is("#artorias")){
+        //     console.log("it worked");
+        // }
     }
 })
 //the rest of the characters are unavailable to the player
