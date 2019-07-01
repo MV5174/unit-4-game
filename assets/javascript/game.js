@@ -13,13 +13,14 @@ $(".card").on("click", function chooseCharacter(event){
     if(!characterChosen){
         characterChosen = true;
         console.log(characterChosen);
-        // chosenCharacter = this;
-        // console.log(chosenCharacter);
-        // var target = $( event.target );
-        // $(this).appendTo("#playerRow");
-        // if ($(event.target).is("#artorias")){
-        //     console.log("it worked");
-        // }
+        chosenCharacter = this;
+        console.log(chosenCharacter);
+        var target = $( event.target );
+        $(this).appendTo("#playerRow");
+        
+        $("#characters").toggle();
+        $("#characters").appendTo("#opponentSelectionRow");
+        $("#characters").toggle();
     }
 })
 //the rest of the characters are unavailable to the player
