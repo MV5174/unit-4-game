@@ -20,14 +20,16 @@
     </div>
 
     <!--Cards for characters-->
-    <div class="row" id="selectionRow">
+    <div id="selectionRow">
 
-    <div class ="row" id="characters">
+    <div class="row" id="characters">
       <div class="card" style="width: 18rem;" id="artorias">
           <img src="assets/images/Artorias.jpg" class="card-img-top" alt="Artorias of the Abyss">
           <div class="card-body">
             <h4 class="card-text"><u>Artorias</u><br> 
-                HP: 125 | AP: 10 | CAP: 10
+                HP: <span id="artoriasHP"></span> | AP: 12 | CAP: 5 
+                <button type="button" class="btn btn-danger choose" id="artoriasButton">Choose</button>
+                <button type="button" class="btn btn-danger" id="artoriasAttackButton">attack</button>
             </h4>
           </div>
         </div>
@@ -35,21 +37,33 @@
         <div class="card" style="width: 18rem;" id="solaire">
           <img src="assets/images/Solaire.jpg" class="card-img-top" alt="Solaire of Astora">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 class="card-text"><u>Solaire</u><br>
+                HP: 150 | AP: 5 | CAP: 12 
+                <button type="button" class="btn btn-danger choose" id="solaireButton">Choose</button>
+                <button type="button" class="btn btn-danger" id="solaireAttackButton">attack</button>
+            </h4>
           </div>
         </div>
 
         <div class="card" style="width: 18rem;" id="ornstein">
           <img src="assets/images/Ornstein.jpg" class="card-img-top" alt="Dragonslayer Ornstein">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 class="card-text"><u>Ornstein</u><br>
+                HP: 150 | AP: 7 | CAP: 10 
+                <button type="button" class="btn btn-danger choose" id="ornsteinButton">Choose</button>
+                <button type="button" class="btn btn-danger" id="ornsteinAttackButton">attack</button>
+            </h4>
           </div>
         </div>
 
         <div class="card" style="width: 18rem;" id="blackKnight">
           <img src="assets/images/Black_Knight.jpg" class="card-img-top" alt="Key Black Knight">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 class="card-text"><u>Black Knight</u><br>
+                HP: 125 | AP: 10 | CAP: 7 
+                <button type="button" class="btn btn-danger choose" id="blackKnightButton">Choose</button>
+                <button type="button" class="btn btn-danger" id="blackKnightAttackButton">attack</button>
+            </h4>
           </div>
         </div>
       </div>
@@ -58,20 +72,16 @@
     <div class="row" id="playerRow">
         <h2 class="col-lg-4">Your Character</h2>
     </div>
+
+        <!--Defender-->
+        <div class="row" id="defenderRow">
+          <h2 class="col-lg-4">Defender</h2>
+      </div>
     <!--Enemies available to attack-->
     <div class="row" id="opponentSelectionRow">
         <h2 class="col-lg-4">Opponents</h2>
     </div>
-    <!--Fight Section with attack button-->
-    <div class="row" id="fightSection">
-        <h2 class="col-lg-4">Press The Button To Attack</h2><br>  
-    </div>
-    <div class="row">
-            <button type="button" class="btn btn-danger col-1 offset-1">Attack</button>
-        </div> 
-    <!--Defender-->
-    <div class="row" id="defenderRow">
-        <h2 class="col-lg-4">Defender</h2>
-    </div>
+     
+
 </body>
 </html>
