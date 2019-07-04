@@ -6,7 +6,7 @@ var opponentChosen = false;
 var chosenCharacter;
 var opponents = 3;
 var artorias = {
-    HP: 50,
+    HP: 60,
     AP: 12,
     CAP: 5,
     isAlive: true,
@@ -23,15 +23,15 @@ var artorias = {
         $("#artoriasHP").text(artorias.HP);
     },
     solaireCounter: function(){
-        solaire.HP = solaire.HP - artorias.CAP;
+        solaire.HP = solaire.HP - this.CAP;
         $("#solaireHP").text(solaire.HP);
     },
     ornsteinCounter: function(){
-        ornstein.HP = ornstein.HP - artorias.CAP;
+        ornstein.HP = ornstein.HP - this.CAP;
         $("#ornsteinHP").text(ornstein.HP);
     },
     blackKnightCounter: function(){
-        blackKnight.HP = blackKnight.HP - artorias.CAP;
+        blackKnight.HP = blackKnight.HP - this.CAP;
         $("#blackKnightHP").text(blackKnight.HP);
     }
 }
@@ -53,22 +53,22 @@ var solaire = {
         $("#solaireHP").text(solaire.HP);
     },
     ornsteinCounter: function(){
-        ornstein.HP = ornstein.HP - solaire.CAP;
+        ornstein.HP = ornstein.HP - this.CAP;
         $("#ornsteinHP").text(ornstein.HP);
     },
     blackKnightCounter: function(){
-        blackKnight.HP = blackKnight.HP - solaire.CAP;
+        blackKnight.HP = blackKnight.HP - this.CAP;
         $("#blackKnightHP").text(blackKnight.HP);
     },
     artoriasCounter: function(){
-        artorias.HP = artorias.HP - solaire.CAP;
+        artorias.HP = artorias.HP - this.CAP;
         $("#artoriasHP").text(artorias.HP);
     },
 }
 var ornstein = {
     HP: 50,
     AP: 7,
-    CAP: 10,
+    CAP: 7,
     isAlive: true,
     artoriasAttack: function (){
         this.HP = this.HP - artorias.AP;
@@ -83,22 +83,22 @@ var ornstein = {
         $("#ornsteinHP").text(ornstein.HP);
     },
     blackKnightCounter: function(){
-        blackKnight.HP = blackKnight.HP - solaire.CAP;
+        blackKnight.HP = blackKnight.HP - this.CAP;
         $("#blackKnightHP").text(blackKnight.HP);
     },
     artoriasCounter: function(){
-        artorias.HP = artorias.HP - solaire.CAP;
+        artorias.HP = artorias.HP - this.CAP;
         $("#artoriasHP").text(artorias.HP);
     },
     solaireCounter: function(){
-        solaire.HP = solaire.HP - artorias.CAP;
+        solaire.HP = solaire.HP - this.CAP;
         $("#solaireHP").text(solaire.HP);
     },
 }
 var blackKnight = {
     HP: 50,
     AP: 10,
-    CAP: 7,
+    CAP: 5,
     isAlive: true,
     artoriasAttack: function (){
         this.HP = this.HP - artorias.AP;
@@ -113,15 +113,15 @@ var blackKnight = {
         $("#blackKnightHP").text(blackKnight.HP);
     },
     artoriasCounter: function(){
-        artorias.HP = artorias.HP - solaire.CAP;
+        artorias.HP = artorias.HP - this.CAP;
         $("#artoriasHP").text(artorias.HP);
     },
     solaireCounter: function(){
-        solaire.HP = solaire.HP - artorias.CAP;
+        solaire.HP = solaire.HP - this.CAP;
         $("#solaireHP").text(solaire.HP);
     },
     ornsteinCounter: function(){
-        ornstein.HP = ornstein.HP - artorias.CAP;
+        ornstein.HP = ornstein.HP - this.CAP;
         $("#ornsteinHP").text(ornstein.HP);
     },
 }
@@ -202,7 +202,7 @@ $("#ornsteinAttackButton").on("click", function(){
         ornstein.artoriasCounter();
     } else if ($(chosenCharacter).is("#solaire")){
         ornstein.solaireAttack();
-        ornstein.solaireAttack();
+        ornstein.solaireCounter();
     } else if ($(chosenCharacter).is("#blackKnight")){
         ornstein.blackKnightAttack();
         artorias.blackKnightCounter();
@@ -233,7 +233,7 @@ $("#artoriasAttackButton").on("click", function(){
     console.log(chosenCharacter);
     if ($(chosenCharacter).is("#solaire")){
         artorias.solaireAttack();
-        artorias.solaireAttack();
+        artorias.solaireCounter();
     } else if ($(chosenCharacter).is("#ornstein")){
         artorias.ornsteinAttack();
         artorias.ornsteinCounter();
@@ -273,7 +273,7 @@ $("#blackKnightAttackButton").on("click", function(){
         blackKnight.ornsteinCounter();
     } else if ($(chosenCharacter).is("#solaire")){
         blackKnight.solaireAttack();
-        blackKnight.solaireAttack();
+        blackKnight.solaireCounter();
     }
     if (blackKnight.HP === 0 || blackKnight.HP <= 0){
         opponentChosen = false;
