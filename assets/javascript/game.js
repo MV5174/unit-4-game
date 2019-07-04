@@ -6,7 +6,7 @@ var opponentChosen = false;
 var chosenCharacter;
 var opponents = 3;
 var artorias = {
-    HP: 1250,
+    HP: 50,
     AP: 12,
     CAP: 5,
     isAlive: true,
@@ -36,7 +36,7 @@ var artorias = {
     }
 }
 var solaire = {
-    HP: 150,
+    HP: 75,
     AP: 5,
     CAP: 5,
     isAlive: true,
@@ -66,7 +66,7 @@ var solaire = {
     },
 }
 var ornstein = {
-    HP: 150,
+    HP: 50,
     AP: 7,
     CAP: 10,
     isAlive: true,
@@ -96,7 +96,7 @@ var ornstein = {
     },
 }
 var blackKnight = {
-    HP: 125,
+    HP: 50,
     AP: 10,
     CAP: 7,
     isAlive: true,
